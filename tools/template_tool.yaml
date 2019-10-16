@@ -34,16 +34,9 @@ platforms:
         host: []
   Windows:
     file_checks:
-      local:
-        - expected/install/path
       system:
         - C:\/Program Files/template_tool/bin/template_tool.exe
     path_mods:
-      local:
-        x64:
-          - expected/install/path
-        x86:
-          - expected/install/path
       system:
         x64:
           - C:\/Program Files/template_tool/bin
