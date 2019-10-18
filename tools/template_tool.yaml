@@ -21,24 +21,17 @@ mussels_version: "0.1"
 type: tool
 platforms:
   Posix:
+    path_checks:
+      - template_tool
+    command_checks:
+      - command: "template_tool --version"
+        output_has: "template_tool 1.2"
     file_checks:
       local:
         - /usr/local/bin/template_tool
       usr:
         - /usr/bin/template_tool
-    path_mods:
-      local:
-        host:
-          - /usr/local/bin
-      usr:
-        host: []
   Windows:
     file_checks:
       system:
         - C:\/Program Files/template_tool/bin/template_tool.exe
-    path_mods:
-      system:
-        x64:
-          - C:\/Program Files/template_tool/bin
-        x86:
-          - C:\/Program Files/template_tool/bin
