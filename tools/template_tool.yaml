@@ -27,11 +27,8 @@ platforms:
       - command: "template_tool --version"
         output_has: "template_tool 1.2"
     file_checks:
-      local:
-        - /usr/local/bin/template_tool
-      usr:
-        - /usr/bin/template_tool
+      - /usr/local/bin/template_tool
+      - /usr/bin/template_tool
   Windows:
     file_checks:
-      system:
-        - C:\/Program Files/template_tool/bin/template_tool.exe
+      - C:\/Program Files/template_tool/bin/template_tool.exe
