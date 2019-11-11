@@ -15,9 +15,9 @@
 # TODO: Replace "template" with your recipe name, and customize the other options accordingly.
 
 name: template_deps
-version: "0.1"
-url: "hxxps://www.example.com/releases/v0.1.tar.gz"
-mussels_version: "0.1"
+version: "0.2"
+url: "hxxps://www.example.com/releases/v0.2.tar.gz"
+mussels_version: "0.2"
 type: collection
 platforms:
   Darwin:

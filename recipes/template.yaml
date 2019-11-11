@@ -16,24 +16,24 @@
 # Adjust the options as needed so your project will build.
 
 name: template
-version: "0.1"
-url: "hxxps://www.example.com/releases/v0.1.tar.gz"
+version: "0.2"
+url: "hxxps://www.example.com/releases/v0.2.tar.gz"
 archive_name_change: # Optional; delete if not needed.
-  - v0.1 # search pattern
-  - template-0.1 # replace pattern
-mussels_version: "0.1"
+  - v0.2 # search pattern
+  - template-0.2 # replace pattern
+mussels_version: "0.2"
 type: recipe
 platforms:
   Darwin:
     host:
       build_script:
         configure: |
-          ./configure --prefix={install}/{target}
+          ./configure --prefix={install}
         make: |
           make
         install: |
           make install
-          install_name_tool -add_rpath @executable_path/../lib "{install}/{target}/lib/template.dylib"
+          install_name_tool -add_rpath @executable_path/../lib "{install}/lib/template.dylib"
       dependencies: []
       install_paths:
         license/template:
@@ -46,7 +46,7 @@ platforms:
     host:
       build_script:
         configure: |
-          ./configure --prefix={install}/{target}
+          ./configure --prefix={install}
         make: |
           gmake
         install: |
@@ -63,7 +63,7 @@ platforms:
     host:
       build_script:
         configure: |
-          ./configure --prefix={install}/{target}
+          ./configure --prefix={install}
         make: |
           make
         install: |
